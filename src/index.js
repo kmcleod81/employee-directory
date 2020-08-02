@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+// This is the entrypoint to the frontend index.html in public folder
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

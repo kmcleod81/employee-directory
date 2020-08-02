@@ -1,15 +1,18 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import Header from './components/Header/Header';
+import Jumbotron from './components/Jumbotron/Jumbotron';
+import Container from './components/Container/Container';
+
 
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
-
+      <Container>
+        <Jumbotron />
+      </Container>
     </div>
   );
 }
