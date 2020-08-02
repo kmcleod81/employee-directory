@@ -1,8 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./Search.css";
-import DataAreaContext from "../../utils/DataAreaContext";
 
-const context = useContext(DataAreaContext);
 
 export default function Search() {
     return (
@@ -13,7 +11,6 @@ export default function Search() {
                     type="search"
                     placeholder="Search"
                     aria-label="Search"
-                    onChange={context.handleSearchChange}
                 />
                 <button
                     className="btn btn-secondary my-2 my-sm-0"
@@ -21,6 +18,6 @@ export default function Search() {
                     Search
                     </button>
             </form>
-        </div>
+        </div >
     );
 }
