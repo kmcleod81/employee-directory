@@ -3,7 +3,7 @@ import "./Container.css";
 
 export default function Container(props) {
     return (
-        <div className="container">
+        <div className="container col-12">
             {props.children}
         </div>
     );
