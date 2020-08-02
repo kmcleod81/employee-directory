@@ -1,7 +1,7 @@
 import React from "react";
 import "./table.css";
 
-export default function Table() {
+export default function Table(props) {
     return (
         <div className="table">
             <table class="table table-striped">
