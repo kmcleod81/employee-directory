@@ -17,7 +17,7 @@ function Table() {
     }
     return (
         <table className='table'>
-            <TableHeader headings={['', 'Name', 'Phone', 'Email', 'DOB']} />
+            <TableHeader headers={['', 'Name', 'Phone', 'Email', 'DOB']} />
             {
                 users && (
                     users.map(item => {
