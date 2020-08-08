@@ -1,39 +1,39 @@
-import React from "react";
-import "./table.css";
+import React, { useState } from 'react';
+import TableHeader from './TableHeader';
+import TableRow from './TableRow';
 
-export default function Table(props) {
+function Table() {
+    const [users, setUsers] = useState(null);
+    if (!users) {
+
+        fetch('https://randomuser.me/api/?results=30')
+            .then(res => {
+                res.json().then(json => {
+                    //console.log(json)
+                    setUsers(json.results)
+                    console.log(json.results)
+                })
+            })
+    }
     return (
-        <div className="table">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <table className='table'>
+            <TableHeader headings={['', 'Name', 'Phone', 'Email', 'DOB']} />
+            {
+                users && (
+                    users.map(item => {
+                        let date = new Date(item.dob.date);
+                        let dateStr = date.toLocaleDateString();
+
+                        return <TableRow imgSrc={item.picture.thumbnail}
+                            name={`${item.name.first} ${item.name.last}`}
+                            phone={item.phone}
+                            email={item.email}
+                            dob={dateStr} />
+                    })
+                )
+            }
+        </table>
     );
-};
+}
+
+export default Table;
