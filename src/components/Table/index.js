@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import TableHeader from './TableHeader';
 import TableRow from './TableRow';
 
+
 function Table() {
     const [users, setUsers] = useState(null);
     if (!users) {

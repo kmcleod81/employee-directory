@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import Jumbotron from './components/Jumbotron/Jumbotron';
-import Container from './components/Container/Container';
-import Search from './components/Search/Search';
-import Table from './components/Table/Table';
+import Jumbotron from './components/Jumbotron';
+import Container from './components/Container';
+import Search from './components/Search';
+import Table from './components/Table';
 
 
 
