@@ -1,10 +1,8 @@
-import React, { useContext } from 'react';
-import UserData from '../../utils/DataContext';
+import React from 'react';
 import "./Search.css";
 
 
-const Search = () => {
-    const context = useContext(UserData);
+const Search = ({onSearchChange, onSortClick}) => {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -14,8 +12,8 @@ const Search = () => {
                     type="search"
                     placeholder="Search by Name"
                     aria-label="Search"
-                    onChange={e => context.handleSearchChange(e)} />
-                <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    onChange={onSearchChange} />
+                <button className="btn btn-secondary my-2 my-sm-0" onClick={onSortClick} type="button">Sort By Name</button>
             </form>
         </nav>
     )
