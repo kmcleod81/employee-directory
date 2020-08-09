@@ -1,4 +1,4 @@
-# employee-directory
+# React Employee Directory
 
 [![GitHub repo size](https://img.shields.io/github/repo-size/Kmcleod81/online-offline-budget-tracker)](https://shields.io/)
 
@@ -12,7 +12,7 @@
 * [Link to Page](##Link-to-Page)
 
 ## Description
-This Employee Directory app enables a user sort the table by name in alphabetical order, as well as filter the users by case sensative name.
+This Employee Directory app built with React enables a user sort the table by name in alphabetical order, as well as filter the users by case sensative name.
 
 ## User Story
 * As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
